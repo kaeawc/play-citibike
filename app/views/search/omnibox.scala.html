@@ -1,0 +1,17 @@
+<div id="omnibox">
+  <div class="searchbox searchbox-shadow" role="search">
+    <input 
+      id="search-field" 
+      placeholder="Characters, Books, Authors" 
+      autocomplete="off" 
+      spellcheck="false"
+      ng-model="query.all"
+      ng-change="search()" />
+    <div class="search-results" ng-repeat="character in data.characters">
+      <div ng-switch="character.newItem">
+        <a class="search-result" ng-bind="character.name" ng-click="choose()" ng-switch-when="true" href="/#/character/add/{{character.name}}"></a>
+        <a class="search-result" ng-bind="character.name" ng-click="choose()" ng-switch-default     href="/#/character/{{character.name}}"></a>
+      </div>
+    </div>
+  </div>
+</div>

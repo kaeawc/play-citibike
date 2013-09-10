@@ -1,7 +1,13 @@
-@(message: String)
-
-@main("Welcome to Play") {
-
-    @play20.welcome(message)
-
-}
+<!DOCTYPE html>
+@html()
+@head()
+<body>
+  @navbar()
+  @search.omnibox()
+  <div class="container">
+    <div class="container" ng-view></div>
+    <hr>
+    @footer()
+  </div>
+</body>
+</html>

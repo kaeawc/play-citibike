@@ -1,0 +1,6 @@
+
+<ul class="branches">
+  <li ng-repeat="branch in branches | filter:query | orderBy:orderProp" class="thumbnail">
+    <a href="#/branches/{{branch.id}}">{{branch.label}}</a>
+  </li>
+</ul>
